@@ -1,0 +1,60 @@
+POST http://localhost:3000/register/
+Content-Type: application/json
+
+{
+    "username": "adarcrd",
+    "password": "richard_567",
+    "name": "Adam Richard",
+    "gender": "male"
+}
+### API 1
+
+POST http://localhost:3000/login/
+Content-Type: application/json
+
+{
+    "username": "narendramodi",
+    "password": "modi@123"
+}
+### API 2
+
+GET http://localhost:3000/user/tweets/feed
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InNlcmVuYXdpbGxpYW1zIiwiaWF0IjoxNjk3Mzg2Mjc3fQ.DJARBi5felbVKuZWLnQsfyxCot2hmquxXd79e2zSWd4
+### API 3
+
+GET http://localhost:3000/user/following/
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InNlcmVuYXdpbGxpYW1zIiwiaWF0IjoxNjk3Mzg2Mjc3fQ.DJARBi5felbVKuZWLnQsfyxCot2hmquxXd79e2zSWd4
+### API 4
+
+GET http://localhost:3000/user/followers/
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im5hcmVuZHJhbW9kaSIsImlhdCI6MTY5NzM1Mzc0MX0.O5W53N97EqwJhiwPlaNguyojUvkG4yAa7mOW0Lg634E
+### API 5
+
+GET http://localhost:3000/tweets/10/
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InNlcmVuYXdpbGxpYW1zIiwiaWF0IjoxNjk3Mzg2Mjc3fQ.DJARBi5felbVKuZWLnQsfyxCot2hmquxXd79e2zSWd4
+### API 6
+
+GET http://localhost:3000/tweets/2/likes/
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InNlcmVuYXdpbGxpYW1zIiwiaWF0IjoxNjk3Mzg2Mjc3fQ.DJARBi5felbVKuZWLnQsfyxCot2hmquxXd79e2zSWd4
+### API 7
+
+GET http://localhost:3000/tweets/5/replies/
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im5hcmVuZHJhbW9kaSIsImlhdCI6MTY5NzM4OTQxNn0.X81TTIiDINmot_DgMo7vuCDOTmmYfB0g2Zr7RCR5YtI
+### API 8
+
+GET http://localhost:3000/user/tweets/
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im5hcmVuZHJhbW9kaSIsImlhdCI6MTY5NzM5MDI3OH0.3Gy1gPAXGevkSAtM-SDM3N08Ikgq6mNgCQXv_VjEz0c
+### API 9
+
+POST http://localhost:3000/user/tweets/
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkpvZUJpZGVuIiwiaWF0IjoxNjk3MTY4NjgxfQ.Jo21s6GSa72I-y89M53wgfbN_aGHE_-LFaBwQzDmxlo
+Content-Type: application/json
+
+{
+    "tweet": "Hello There"
+}
+### API 10
+
+DELETE http://localhost:3000/tweets/14/
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkpvZUJpZGVuIiwiaWF0IjoxNjk3MTY4NjgxfQ.Jo21s6GSa72I-y89M53wgfbN_aGHE_-LFaBwQzDmxlo
+### API 11
