@@ -79,18 +79,54 @@ const checkFollowing = async (obj) => {
 };
 
 //API 1
+// app.post("/register/", async (request, response) => {
+//   const { username, password, name, gender } = request.body;
+//   const user = await db.get(`
+//         SELECT
+//             username
+//         FROM
+//             user
+//         WHERE
+//             username = '${username}';
+//     `);
+//   if (user === undefined) {
+//     if (password && password.length > 6) {
+//       const hashedPassword = await bcrypt.hash(request.body.password, 10);
+//       console.log(hashedPassword);
+//       await db.run(`
+//         INSERT INTO
+//             user
+//         (name, username, password, gender)
+//         VALUES
+//         (
+//             '${name}',
+//             '${username}',
+//             '${hashedPassword}',
+//             '${gender}'
+//         )
+//       `);
+//       response.send("User created successfully");
+//     } else {
+//       response.status(400).send("Password is too short");
+//     }
+//   } else {
+//     response.status(400).send("User already exists");
+//   }
+// });
+
 app.post("/register/", async (request, response) => {
   const { username, password, name, gender } = request.body;
   const user = await db.get(`
-        SELECT 
-            username
-        FROM
-            user
-        WHERE
-            username = '${username}';
-    `);
+    SELECT 
+        username
+    FROM
+        user
+    WHERE
+        username = '${username}';
+  `);
   if (user === undefined) {
-    if (password.length > 6) {
+    if (password && password.length > 6) {
+      // Check if password is defined and has a length > 6
       const hashedPassword = await bcrypt.hash(request.body.password, 10);
       console.log(hashedPassword);
       await db.run(`
